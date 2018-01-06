@@ -15,6 +15,7 @@ import { CartComponent } from './cart/cart.component';
 import { HealthComponent } from './health/health.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -33,7 +34,10 @@ import { LoginComponent } from './login/login.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBMBK453OcOfL1FiU6zLOZ4IJuLeuUIcCI'
+    })
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

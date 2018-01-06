@@ -1,3 +1,9 @@
 <p>
-  cart works!
+    cart works!
 </p>
+<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="clickedLocation($event)">
+    <agm-marker 
+    [latitude]="latitude" 
+    [longitude]="longitude" 
+    *ngIf="locationChosen"></agm-marker> 
+</agm-map>

@@ -12,7 +12,7 @@
 
     <form>
       <input type="text" class="txt" name="item" placeholder="Great choice.." [(ngModel)]="itemTxt">
-      <!--<br><span>{{ itemTxt }}</span>-->
+      <!--<br><span>{{ itemTxt }}</span> 2way data binding [(ngModel)]-->
       <input type="submit" class="btn" [value]="btnTxt" (click)="addItem()">
     </form>
   </div>
@@ -22,4 +22,7 @@
       </p>
   </div>
 </div>
+
+<!-- copy-paste "../node_modules/bootstrap/dist/css/bootstrap.min.css" 
+  under angular-cli.json/styles  too add a bootstrap into this project-->
 
