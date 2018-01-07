@@ -1,7 +1,8 @@
 <p>
     cart works!
 </p>
-<agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="clickedLocation($event)">
+<agm-map [latitude]="latitude" [longitude]="longitude"> 
+    <!-- agm-map dragable marker (mapClick)="clickedLocation($event)"-->
     <agm-marker 
     [latitude]="latitude" 
     [longitude]="longitude" 

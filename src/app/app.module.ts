@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
+import { HttpModule } from '@angular/http';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -15,7 +17,8 @@ import { CartComponent } from './cart/cart.component';
 import { HealthComponent } from './health/health.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { AgmCoreModule } from '@agm/core';
+import { ServerComponent } from './server/server.component';
+
 
 
 @NgModule({
@@ -28,12 +31,14 @@ import { AgmCoreModule } from '@agm/core';
     CartComponent,
     HealthComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ServerComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpModule,
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBMBK453OcOfL1FiU6zLOZ4IJuLeuUIcCI'

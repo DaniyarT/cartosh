@@ -1,3 +1,16 @@
-<p>
-  register works!
+<p *ngIf="">
+  {{ getUserStatus() }}
 </p>
+<input 
+type="text" class="form-control" (input)="onUpdateFirstName($event)" placeholder="Steve">
+<!-- above is the example of event binding -->
+{{ firstName }}<br>
+<input type="text" class="form-control" [(ngModel)]="lastName" placeholder="Jobs">
+<!-- this one is the 2way data binding -->
+{{ lastName }}<br>
+<input type="text" class="form-control" placeholder="sjobs@mail.com"><br>
+<input type="text" class="form-control" placeholder="password"><br>
+<button *ngIf="allowNewUser" class="btn btn-primary" [disabled]="!allowNewUser" (click)="onCombineNames()">Register</button>
+<!-- property and event bindings together -->
+<p>{{ userName }}</p>
+<!-- string interpolation -->

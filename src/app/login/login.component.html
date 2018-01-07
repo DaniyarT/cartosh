@@ -1,3 +1,7 @@
 <p>
-  login works!
+  Being an {{ getUserStatus() }} is sucks! <span [class.agree-babe]="inputGuard.value === 'yes'">Do ou agree?</span>
 </p>
+
+<input type="text" class="form-control" placeholder="sjobs@mail.com" #inputGuard (keyup)="0"><br>
+<button class="btn btn-primary" [disabled]="inputGuard.value !== 'yes'" (click)="onLogin()">Login</button>
+{{ userCreationStatus }}

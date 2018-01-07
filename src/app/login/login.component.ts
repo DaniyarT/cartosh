@@ -7,7 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  allowNewUser = false;
+  userCreationStatus = '';
+  userStatus = 'offline';
+
+  getUserStatus() {                 //useful and easy example of method
+  return this.userStatus;         
+}
+
+  constructor() { 
+    setTimeout(() => {
+      this.allowNewUser = true;
+    }, 500);
+  }
+
+  onLogin() {
+    this.userCreationStatus = 'You logged in!!!'
+  }
 
   ngOnInit() {
   }
